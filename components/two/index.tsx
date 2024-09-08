@@ -7,7 +7,6 @@ function Two() {
     const [active, setActive] = useState<number>()
     const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false)
     const [showAll, setShowAll] = useState<boolean>(false)
-    console.log(isSmallScreen, 'isSmallScreen');
 
     // Handle screen size detection
     useEffect(() => {
@@ -29,7 +28,7 @@ function Two() {
     const displayedData = isSmallScreen && !showAll ? data.slice(0, 6) : data
 
     return (
-        <div className='w-full'>
+        <div className='w-full mt-[5%]'>
             <div className='m-auto'>
                 <p className='text-[44px] md:text-[80px] xl:text-[98px] text-center leading-[50px] md:leading-[100px]'>
                     Tú indicas el <br /> problema, nosotros te <br /> damos la solución
